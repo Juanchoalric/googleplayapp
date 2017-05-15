@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content" android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="horizontal"
-    >
-
-
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="70sp"
-            android:padding="8sp"
+            android:id="@+id/parent"
+            android:paddingLeft="10sp"
             android:layout_height="match_parent">
 
             <!-- TODO: Update blank fragment layout -->
@@ -17,7 +11,7 @@
             <ImageView
                 android:id="@+id/imagen_juego"
                 android:layout_width="match_parent"
-                android:layout_height="80sp"
+                android:layout_height="100sp"
                 android:scaleType="centerCrop"
                 android:layout_marginBottom="8sp"
                 android:src="@drawable/swordartonline"
@@ -26,7 +20,7 @@
             <TextView
                 android:id="@+id/titulo_juego"
                 android:textColor="#000"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:layout_below="@+id/imagen_juego"
                 android:layout_width="match_parent"
                 android:layout_marginBottom="8sp"
@@ -36,26 +30,26 @@
             <TextView
                 android:id="@+id/estrellas_juego"
                 android:textColor="#000"
-                android:textSize="10sp"
-                android:layout_below="@+id/titulo_juego"
+                android:textSize="12sp"
+                android:layout_alignParentBottom="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingBottom="8sp"
                 android:text="4.5"/>
 
             <TextView
                 android:id="@+id/valor_juego"
                 android:textColor="#185818"
-                android:textSize="10sp"
-                android:layout_below="@+id/titulo_juego"
+                android:textSize="12sp"
+                android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8sp"
                 android:textAllCaps="true"
+                android:paddingBottom="8sp"
                 android:text="gratis"/>
 
 
 
         </RelativeLayout>
-
-</LinearLayout>

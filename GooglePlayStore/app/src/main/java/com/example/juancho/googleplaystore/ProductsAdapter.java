@@ -14,7 +14,7 @@ import java.util.List;
  * Created by juancho on 08/05/17.
  */
 
-public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ProductViewHolder>{
+ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ProductViewHolder>{
 
     private List<Product> products;
 
@@ -23,16 +23,16 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
     }
 
     public static class ProductViewHolder extends RecyclerView.ViewHolder {
-         CardView cv;
-         TextView titleProduct;
-         TextView starProduct;
-         ImageView imageProduct;
-         TextView valorProduct;
+         private CardView cv;
+         private TextView titleProduct;
+         private TextView starProduct;
+         private ImageView imageProduct;
+         private TextView valorProduct;
 
 
 
 
-        ProductViewHolder(View itemView) {
+        public ProductViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cv);
             titleProduct = (TextView)itemView.findViewById(R.id.titulo_juego);
@@ -53,7 +53,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
 
     @Override
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_list, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.detalle_item, parent, false);
         ProductViewHolder pvh = new ProductViewHolder(v);
         return pvh;
     }
@@ -66,8 +66,4 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
         holder.valorProduct.setText(products.get(position).getValorGratis());
     }
 
-    @Override
-    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        super.onAttachedToRecyclerView(recyclerView);
-    }
 }
